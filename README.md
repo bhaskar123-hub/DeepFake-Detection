@@ -121,7 +121,26 @@ Adjust training configuration as needed before executing the command below:
 python run.py --train
 ```
 
-## Results
+## Results - On Training Data across varying sizes of FF++ Dataset
+
+## Method 1  - Linear Probing 
+
+<img width="1213" height="315" alt="image" src="https://github.com/user-attachments/assets/69344bad-b34f-4e76-ac4a-5f6835350e50" />
+
+Linear probing is a technique to evaluate the quality of pretrained representations (like those from CLIP) by freezing the backbone (e.g., ViT in CLIP) and training only a shallow linear classifier (e.g., a single-layer MLP, nn.Linear) on top of it.
+
+Test whether the pretrained features are linearly separable for the downstream classification task (e.g., real vs. fake).
+
+<img width="840" height="438" alt="image" src="https://github.com/user-attachments/assets/ad560343-904a-4015-b8f5-ade665ecbcc2" />
+
+
+
+
+
+
+
+
+
 
 
 
