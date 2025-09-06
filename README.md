@@ -1,4 +1,5 @@
-<img width="4968" height="88" alt="image" src="https://github.com/user-attachments/assets/61a1cd35-c4c9-41b8-87ec-e7def2ff9bae" /># Unlocking the Hidden Potential of CLIP in Generalizable Deepfake Detection
+<img width="4968" height="88" alt="image" src="https://github.com/user-attachments/assets/61a1cd35-c4c9-41b8-87ec-e7def2ff9bae" /> 
+# Unlocking the Hidden Potential of CLIP in Generalizable Deepfake Detection
 
 [![arXiv Badge](https://img.shields.io/badge/arXiv-B31B1B?logo=arxiv&logoColor=FFF)](https://arxiv.org/abs/2503.19683)
 [![Hugging Face Badge](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/yermandy/deepfake-detection)
@@ -198,6 +199,7 @@ Exceptional Gains for Limited Data: The most striking result is the dramatic imp
 For smaller datasets (25%), the training exhibits a pronounced initial lag (slow learning for first few epochs) followed by a sudden and significant acceleration in performance. This suggests Slerp's full benefits become apparent once sufficient initial feature understanding is established.
 
 Accelerated Initial Learning for Abundant Data: Conversely, with ample data (75% and 100%), the model demonstrates extremely rapid learning from epoch 0, quickly achieving high accuracy. This indicates the potent combination of Slerp augmentation and the multi-objective loss function (Cross-Entropy + Alignment + Uniformity) efficiently guides the feature space organization.
+
 
 
 
