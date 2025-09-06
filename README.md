@@ -135,13 +135,12 @@ Test whether the pretrained features are linearly separable for the downstream c
 
 ## Method 2  - LN Tuning Only (LayerNorn Tuning)
 
-<img width="1218" height="350" alt="image" src="https://github.com/user-attachments/assets/56c8155c-8a44-4c4d-8cf4-1f05eb6ae424" />
-
 LayerNorm (LN) Tuning involves unfreezing only the LayerNorm parameters in the frozen CLIP backbone and training them, in addition to the linear classifier. It enables minimal fine-tuning while preserving most of the CLIP model's knowledge.
 
 Improve performance over plain linear probing while keeping the number of trainable parameters very low (∼0.034%).
-
+<img width="1218" height="350" alt="image" src="https://github.com/user-attachments/assets/56c8155c-8a44-4c4d-8cf4-1f05eb6ae424" />
 <img width="1622" height="810" alt="image" src="https://github.com/user-attachments/assets/df2c5c65-bef5-4b3e-ad99-2c585fff7d56" />
+
 
 
 
