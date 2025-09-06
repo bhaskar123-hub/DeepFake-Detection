@@ -121,16 +121,4 @@ Adjust training configuration as needed before executing the command below:
 python run.py --train
 ```
 
-### Cite
 
-``` bibtex
-@article{yermakov-2025-deepfake-detection,
-    title={Unlocking the Hidden Potential of CLIP in Generalizable Deepfake Detection}, 
-    author={Andrii Yermakov and Jan Cech and Jiri Matas},
-    year={2025},
-    eprint={2503.19683},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    url={https://arxiv.org/abs/2503.19683}, 
-}
-```
