@@ -11,8 +11,32 @@ This is the official repository for the paper:
 
 ### Abstract
 
-> This paper tackles the challenge of detecting partially manipulated facial deepfakes, which involve subtle alterations to specific facial features while retaining the overall context, posing a greater detection difficulty than fully synthetic faces. We leverage the Contrastive Language-Image Pre-training (CLIP) model, specifically its ViT-L/14 visual encoder, to develop a generalizable detection method that performs robustly across diverse datasets and unknown forgery techniques with minimal modifications to the original model. The proposed approach utilizes parameter-efficient fine-tuning (PEFT) techniques, such as LN-tuning, to adjust a small subset of the model's parameters, preserving CLIP's pre-trained knowledge and reducing overfitting. A tailored preprocessing pipeline optimizes the method for facial images, while regularization strategies, including L2 normalization and metric learning on a hyperspherical manifold, enhance generalization. Trained on the FaceForensics++ dataset and evaluated in a cross-dataset fashion on Celeb-DF-v2, DFDC, FFIW, and others, the proposed method achieves competitive detection accuracy comparable to or outperforming much more complex state-of-the-art techniques. This work highlights the efficacy of CLIP's visual encoder in facial deepfake detection and establishes a simple, powerful baseline for future research, advancing the field of generalizable deepfake detection.
+Detecting partially manipulated facial deepfakes—where only specific facial features are subtly altered while the rest remains realistic—is more challenging than spotting fully synthetic faces. To address this, we propose a generalizable detection framework built on CLIP’s ViT-L/14 visual encoder.
 
+Key Contributions:
+
+⚡ Generalizable Approach: Leverages CLIP’s strong visual representations with minimal modifications, ensuring robustness across datasets and unseen forgery types.
+
+🛠 Parameter-Efficient Fine-Tuning (PEFT): Applies LN-tuning to update only a small set of parameters, reducing overfitting while preserving pre-trained knowledge.
+
+🖼 Preprocessing Pipeline: Optimized for facial imagery to highlight subtle manipulations.
+
+🔒 Regularization Strategies: Incorporates L2 normalization and metric learning on a hyperspherical manifold for stronger generalization.
+
+📊 Extensive Evaluation: Trained on FaceForensics++ and tested across Celeb-DF-v2, DFDC, FFIW, and more — achieving accuracy on par with or exceeding more complex state-of-the-art methods.
+
+Impact:
+
+This work demonstrates the effectiveness of CLIP’s visual encoder for deepfake detection and introduces a simple yet powerful baseline for future research in generalizable and robust detection methods.
+
+### Note
+
+✨ To truly grasp the journey behind this project, take a look at the PPT and PDF I’ve shared — they walk you through the process step by step. And at the end of this README, I’ve included the results I achieved, which made all the effort worthwhile. 🚀
+
+## 📑 Project Resources
+
+- [📄 Detailed Project Report (PDF)](https://github.com/bhaskar123-hub/DeepFake-Detection/blob/main/report_conclusion.pdf)  
+- [📊 Presentation Slides (PPTX)](https://github.com/bhaskar123-hub/DeepFake-Detection/blob/main/MTP_FINAL_1.pptx)  
 
 ## Set up environment
 
@@ -200,6 +224,7 @@ Exceptional Gains for Limited Data: The most striking result is the dramatic imp
 For smaller datasets (25%), the training exhibits a pronounced initial lag (slow learning for first few epochs) followed by a sudden and significant acceleration in performance. This suggests Slerp's full benefits become apparent once sufficient initial feature understanding is established.
 
 Accelerated Initial Learning for Abundant Data: Conversely, with ample data (75% and 100%), the model demonstrates extremely rapid learning from epoch 0, quickly achieving high accuracy. This indicates the potent combination of Slerp augmentation and the multi-objective loss function (Cross-Entropy + Alignment + Uniformity) efficiently guides the feature space organization.
+
 
 
 
