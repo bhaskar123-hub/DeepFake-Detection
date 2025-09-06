@@ -125,12 +125,11 @@ python run.py --train
 
 ## Method 1  - Linear Probing 
 
-<img width="1213" height="315" alt="image" src="https://github.com/user-attachments/assets/69344bad-b34f-4e76-ac4a-5f6835350e50" />
-
 Linear probing is a technique to evaluate the quality of pretrained representations (like those from CLIP) by freezing the backbone (e.g., ViT in CLIP) and training only a shallow linear classifier (e.g., a single-layer MLP, nn.Linear) on top of it.
 
 Test whether the pretrained features are linearly separable for the downstream classification task (e.g., real vs. fake).
 
+<img width="1213" height="315" alt="image" src="https://github.com/user-attachments/assets/69344bad-b34f-4e76-ac4a-5f6835350e50" />
 <img width="1628" height="814" alt="image" src="https://github.com/user-attachments/assets/04e27c8c-4672-42fe-ad72-9f0e05093fad" />
 
 ## Method 2  - LN Tuning Only (LayerNorn Tuning)
@@ -138,8 +137,10 @@ Test whether the pretrained features are linearly separable for the downstream c
 LayerNorm (LN) Tuning involves unfreezing only the LayerNorm parameters in the frozen CLIP backbone and training them, in addition to the linear classifier. It enables minimal fine-tuning while preserving most of the CLIP model's knowledge.
 
 Improve performance over plain linear probing while keeping the number of trainable parameters very low (∼0.034%).
+
 <img width="1218" height="350" alt="image" src="https://github.com/user-attachments/assets/56c8155c-8a44-4c4d-8cf4-1f05eb6ae424" />
 <img width="1622" height="810" alt="image" src="https://github.com/user-attachments/assets/df2c5c65-bef5-4b3e-ad99-2c585fff7d56" />
+
 
 
 
