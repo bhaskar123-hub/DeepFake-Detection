@@ -121,7 +121,7 @@ Adjust training configuration as needed before executing the command below:
 python run.py --train
 ```
 
-## Results - On Training Data across varying sizes of FF++ Dataset
+# Results - On Training Data across varying sizes of FF++ Dataset
 
 ## Method 1  - Linear Probing 
 
@@ -131,7 +131,22 @@ Linear probing is a technique to evaluate the quality of pretrained representati
 
 Test whether the pretrained features are linearly separable for the downstream classification task (e.g., real vs. fake).
 
-<img width="840" height="438" alt="image" src="https://github.com/user-attachments/assets/ad560343-904a-4015-b8f5-ade665ecbcc2" />
+<img width="1628" height="814" alt="image" src="https://github.com/user-attachments/assets/04e27c8c-4672-42fe-ad72-9f0e05093fad" />
+
+## Method 2  - LN Tuning Only (LayerNorn Tuning)
+
+<img width="1218" height="350" alt="image" src="https://github.com/user-attachments/assets/56c8155c-8a44-4c4d-8cf4-1f05eb6ae424" />
+
+LayerNorm (LN) Tuning involves unfreezing only the LayerNorm parameters in the frozen CLIP backbone and training them, in addition to the linear classifier. It enables minimal fine-tuning while preserving most of the CLIP model's knowledge.
+
+Improve performance over plain linear probing while keeping the number of trainable parameters very low (∼0.034%).
+
+<img width="1622" height="810" alt="image" src="https://github.com/user-attachments/assets/df2c5c65-bef5-4b3e-ad99-2c585fff7d56" />
+
+
+
+
+
 
 
 
